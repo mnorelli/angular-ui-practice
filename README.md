@@ -1,11 +1,11 @@
-# Angular UI: ngClass and CSS animations
+# Angular UI: ngClass, CSS animations and ngAnimate
 
 ### Objectives
 - Dynamically apply and remove css classes using `ng-class`
 - Animate elements with CSS transitions or keyframe animations
-- Learn how to do CSS animations 'the Angular way'
+- Learn how to do animations _the Angular way_ (see lesson 2)
 
-## CSS Classes in Angular - Intro (5 mins)
+## CSS Classes in Angular
 
 As you know, Angular is a great, dynamic front-end framework. One of the things you'll do _most_ often when building a frontend is apply CSS classes to style elements on the page. Having the ability to change those styles based on _data_  can enable you to make some really dynamic interface designs. You certainly have the skills to do this with tools you've already learned, but Angular has a special directive just for this purpose – **ngClass**.
 
@@ -18,14 +18,6 @@ Finally, you'll incorporate two external Angular modules to kick your UI up a no
 Now, go check out the starter code in `starter-code/app` and see what we're working with. The starter code is a basic Angular app using stuff you've mostly already seen. _(Note: we are stepping back for simplicity. There is no need to install with `bower` or run a server to test this code. Everything here is on the front-end.)_
 
 Take a few minutes and browse through the code that's there and investigate how it works and what it's doing.
-
-## Add UI-Bootstrap - Independent Practice (5 minutes)
-
-The community-made library UI-Bootstrap refactors many Bootstrap Components that relied on jQuery to instead use Angular.  
-
-Follow the UI-Bootstrap getting started guide to add UI-Bootstrap to your project.  Don't worry about changing the styles of existing elements in the starter code, but as you experiment with adding elements today, you can try the UI-Bootstrap versions.
-
-The Bootstrap docs say you should add `<meta name="viewport" content="width=device-width, initial-scale=1">`.  What does the `viewport` meta tag do? 
 
 ## ngClass - Codealong (10 mins)
 
@@ -74,21 +66,9 @@ Would equate to:
 <input ... class="error super so-cool" ... >
 ```
 
-## ngClass - Independent Practice (10 mins)
+## Angular Form Validation - Independent Practice (10 mins)
 
-Now, go crazy. You have 10 minutes - start experimenting with your own `ngClass` expressions:
-
-- Add more class names and booleans as properties of your `ngClass` object string
-- Try `ngClass` inside the `ngRepeat`
-- Make a checkbox with a class directly on it that toggles some style on/off
-- Make some changeable data in one part of the interface change the style of an element style in a separate part of the interface
-- Try using an `ngClick` to toggle an arbitrary piece of data that affects multiple pieces of the interface at once
-
-Play with it and you'll start seeing how powerful it is. Let's see what you come up with!
-
-## Angular Form Validation - Independent Practice (10 minutes)
-
-Angular has built-in validation for many form fields. 
+[Angular has built-in validation for many form fields.](https://docs.angularjs.org/guide/forms)
 
 Add a field to the form for a "reason" for the award, and update the list of winners to display what they won the award for.
 
@@ -96,19 +76,14 @@ Require the user to input a reason for the new winner. Try submitting the form w
 
 Give the reason field a minimum length of three and a maximum length of thirty. (Hint: look at the docs for `input[text]`.) Now what happens if you submit the form with the wrong length reason?  Disable the submit button if the form is invalid (Hint: look up `$invalid`.)
 
-## Share out (10 mins)
-
-<!-- 55 mins -->
-
-## Break! (10 mins)
 
 ## CSS Transitions - Intro (5 mins)
 
 Now that we've got that down, let's talk about our other sweet trick – animation in CSS.
 
-CSS supports two main kinds of animation: **transitions** and **keyframe animations**. Angular has a wrapper for many of the base CSS animations called `ngAnimate`. However, today we'll look at those base CSS animations. 
+CSS supports two main kinds of animation: **transitions** and **keyframe animations**. Angular has a wrapper for many of the base CSS animations called `ngAnimate`. Right now we'll start with those base CSS animations. 
 
-They both result in styles changing over time, and both don't give you any extra styling – you can only animate using CSS properties that already exist.
+They both result in styles changing over time, and neither one gives you any extra styling – you can only animate using CSS properties that already exist.
 
 **Transitions** are generally used as a reaction to a user's action - something that changes when you hover or focus or click.
 
@@ -178,7 +153,7 @@ Note also that you can put the time in seconds.
 
 Now before we try it ourselves, let's see an animation. Animations are triggered, remember. By default, they are triggered when an object appears or when a class is applied to an object.
 
-Before we can trigger a keyframe animation, we have to _define_  it with keyframes. Imagine a timeline where you're saying "At this spot, do this. At this next spot, change that. At this other spot, it should look like this."
+Before we can trigger a keyframe animation, we have to _define_ it with keyframes. Imagine a timeline where you're saying "At this spot, do this. At this next spot, change that. At this other spot, it should look like this."
 
 We do that by creating a special `@keyframes` rule, and we name it whatever we like:
 
@@ -211,38 +186,11 @@ Just like a function, we reference the animation with the name we invented.
 
 **Try refreshing the page** – see how it now fades in? **Try adding a name.** See how it fades?
 
-## Transitions & Keyframes Independent Practice (10 minutes)
+[Here is a great CSS animation library](https://daneden.github.io/animate.css/)
 
-Now that we've seen two simple examples, play around with animations. Add keyframes to animate different properties. Use transitions over hover on other elements, and see what CSS properties you can subtly animate.
+Grab one of the animations and add it to your `style.css`
 
-There are a lot of CSS properties to play with and a lot of possibilities.  For instance:
-
-- Change font weight or color when you hover over a winner
-- Trying changing both opacity and color when fading in
-- How could you make something fade _out_?
-- Most importantly – **what simple animations could you add to help guide a user to know what to do with this page?** How could you use animation to show them how the interface works?
-
-## Share & Discuss (10 mins)
+## Share & Discuss (20 mins)
 - What's the difference between CSS transitions and animations? Where might you use one or the other?
 - How do you write an `ngClass` with multiple CSS classes?
 - When do you use `ngClass` vs. normal classes?
-
-<!-- 100 mins -->
-
-## External Modules - Intro (5 mins)
-
-UI-Bootstrap was built as part of a larger Angular-UI project that has many modules. (You can see their list at <a href="https://angular-ui.github.io/">Angular-UI</a>.) Those are only one group of modules; many more exist. There's no real central location to find a comprehensive list of community-built angular modules, but some sites have tried - like <a href="http://ngmodules.org/" target="_blank">ngmodules.org</a>. You'll also find articles or posts online like <a href="https://codegeekz.com/18-best-angularjs-directives-for-developers/" target="_blank">18 Best AngularJS Directives for Developers</a>. As with Ruby gems and Node modules, you'll get into the habit of checking if "there's a ____ for that." Just be careful to check when an external module was last updated, whether it has good documentation, whether it's maintained, etc.
-
-## External Directive Independent Practice (15 mins)
-
-Try incorporating community-made Angular modules into an existing Angular project (like the Awwwards sample).  Feel free to try any you'd like.  Here are a few ideas:
-
-  * Add the <a href="https://github.com/urish/angular-moment" target="_blank">angular-moment</a> directive to show a date and time in your app that ticks down by the second.
-
-  * Add the `currentWeather` directive from the <a href="https://github.com/sf-wdi-22-23/modules-22/blob/master/w10-mean/d2-homework/directives.md" target="_blank">Angular Directives reading</a>.
-
-  * Add the <a href="https://github.com/allenhwkim/angularjs-google-maps" target="_blank">ngMap</a> directive to display a map in your app centered on SF. **Hint:** <a href="http://allenhwkim.tumblr.com/post/70986888283/google-map-as-the-simplest-way" target="_blank">This blog post</a> has some very helpful examples.
-
-
-
-
