@@ -5,17 +5,17 @@
 - Animate elements with CSS transitions or keyframe animations
 - Learn how to do animations _the Angular way_ (see lesson 2)
 
-## CSS Classes in Angular
+## CSS Classes in Angular - Intro (5 mins)
 
 As you know, Angular is a great, dynamic front-end framework. One of the things you'll do _most_ often when building a frontend is apply CSS classes to style elements on the page. Having the ability to change those styles based on _data_  can enable you to make some really dynamic interface designs. You certainly have the skills to do this with tools you've already learned, but Angular has a special directive just for this purpose – **ngClass**.
 
 Once we've looked at how Angular helps us apply classes, we'll mix in some non-Angular-specific strategies to add subtle animation to our style with CSS. Little things like CSS animation can really boost the credibility of your design – _if_ you use it well. As a first step, you have to know how to use it at all.
 
-Finally, you'll incorporate two external Angular modules to kick your UI up a notch.
+In lesson 2, we'll see how to do animations 'the Angular way'.
 
-## Starter Code - Intro (5 mins)
+## Starter Code
 
-Now, go check out the starter code in `starter-code/app` and see what we're working with. The starter code is a basic Angular app using stuff you've mostly already seen. _(Note: we are stepping back for simplicity. There is no need to install with `bower` or run a server to test this code. Everything here is on the front-end.)_
+Let's check out the starter code in `starter-code/app` and see what we're working with. The starter code is a basic Angular app using stuff you've mostly already seen. _(Note: we are stepping back for simplicity. There is no need to install with `bower` or run a server to test this code. Everything here is on the front-end.)_
 
 Take a few minutes and browse through the code that's there and investigate how it works and what it's doing.
 
@@ -68,13 +68,11 @@ Would equate to:
 
 ## Angular Form Validation - Independent Practice (10 mins)
 
-[Angular has built-in validation for many form fields.](https://docs.angularjs.org/guide/forms)
+Angular also has built-in [form validation](https://docs.angularjs.org/guide/forms) for many form fields.
 
-Add a field to the form for a "reason" for the award, and update the list of winners to display what they won the award for.
-
-Require the user to input a reason for the new winner. Try submitting the form with a blank reason, and see what happens. 
-
-Give the reason field a minimum length of three and a maximum length of thirty. (Hint: look at the docs for `input[text]`.) Now what happens if you submit the form with the wrong length reason?  Disable the submit button if the form is invalid (Hint: look up `$invalid`.)
+- Add a field to the form for a "reason" for the award, and update the list of winners to display why they won.
+- Require the user to input a reason for the new winner. Try submitting the form with a blank reason, and see what happens. 
+- Give the reason field a minimum length of three and a maximum length of thirty. (Hint: look at the docs for `input[text]`.) Now what happens if you submit the form with the wrong length reason?  Disable the submit button if the form is invalid (Hint: look up `$invalid`.)
 
 
 ## CSS Transitions - Intro (5 mins)
@@ -190,7 +188,7 @@ Just like a function, we reference the animation with the name we invented.
 
 Grab one of the animations and add it to your `style.css`
 
-## Share & Discuss (20 mins)
+## Share & Discuss (10 mins)
 - What's the difference between CSS transitions and animations? Where might you use one or the other?
 - How do you write an `ngClass` with multiple CSS classes?
 - When do you use `ngClass` vs. normal classes?
