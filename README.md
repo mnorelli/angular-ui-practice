@@ -3,6 +3,7 @@
 ### Objectives
 - Dynamically apply and remove css classes using `ng-class`
 - Animate elements with CSS transitions or keyframe animations
+- Learn how to do CSS animations 'the Angular way'
 
 ## CSS Classes in Angular - Intro (5 mins)
 
@@ -14,7 +15,7 @@ Finally, you'll incorporate two external Angular modules to kick your UI up a no
 
 ## Starter Code - Intro (5 mins)
 
-Now, go check out the starter code in `starter-code/app` and see what we're working with. The starter code is a basic Angular app using stuff you've mostly already seen.
+Now, go check out the starter code in `starter-code/app` and see what we're working with. The starter code is a basic Angular app using stuff you've mostly already seen. _(Note: we are stepping back for simplicity. There is no need to install with `bower` or run a server to test this code. Everything here is on the front-end.)_
 
 Take a few minutes and browse through the code that's there and investigate how it works and what it's doing.
 
