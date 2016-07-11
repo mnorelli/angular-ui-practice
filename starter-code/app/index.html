@@ -23,14 +23,17 @@
 
         <form name="winnerForm" ng-submit="awards.createNewWinner()">
           <label for="new-winner-name">New Winner's Name:</label>
-          <input type="text" id="new-winner-name" ng-model="awards.newWinner.name" placeholder="e.g. Iam Vinning">
+          <input type="text" id="new-winner-name" ng-model="awards.newWinner.name" ng-class="{'error': awards.newWinner.name.length <= 4}" placeholder="e.g. Justin White" >
+
+          <label for="new-winner-name">Reason:</label>
+          <input type="text" id="new-winner-reason" ng-model="awards.newWinner.reason" ng-class="{'error': awards.newWinner.reason.length <= 4}" placeholder="e.g. best commenting" >
 
           <input type="submit" value="Add New Winner" ng-disabled="awards.newWinner.name.length <= 4 || awards.newWinner.name.length == null">
         </form>
 
         <ol id="contestants">
           <li ng-repeat="winner in awards.winners">
-            <strong>{{winner.name}}</strong>
+            <strong>{{winner.name}}</strong>  <small>{{winner.reason}}</small>
           </li>
         </ol>
       </div>
